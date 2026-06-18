@@ -1,0 +1,233 @@
+/* ZMIENNE I ESTETYKA NOCNA */
+:root {
+    --bg-deep: #0B0F19;       /* Głęboki, nocny granat/czarny */
+    --bg-card: #161F30;       /* Jaśniejszy odcień na karty i sekcje */
+    --accent: #E2B659;        /* Sowie złoto / bursztyn (kolor oczu sowy) */
+    --text-main: #F3F4F6;     /* Czysty, ale miękki biały tekst (DM Sans) */
+    --text-body: #D1D5DB;     /* Tekst czytelniczy (Lora) */
+    --text-muted: #9CA3AF;    /* Szary do mniej ważnych elementów */
+    
+    --font-header: 'DM Sans', sans-serif;
+    --font-body: 'Lora', serif;
+}
+
+/* RESET & PODSTAWY */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-deep);
+    color: var(--text-main);
+    font-family: var(--font-body);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* NAGŁÓWKI (DM SANS) */
+h1, h2, h3, h4, .logo-text, .btn-search {
+    font-family: var(--font-header);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+}
+
+/* HEADER */
+.main-header {
+    background-color: rgba(11, 15, 25, 0.85);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1.2rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-space {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    text-decoration: none;
+    color: var(--text-main);
+}
+
+.logo-placeholder {
+    font-size: 1.75rem; /* Tutaj wpadnie Twoje logo */
+}
+
+.logo-text {
+    font-size: 1.35rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--accent);
+}
+
+.main-nav ul {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.main-nav a {
+    color: var(--text-muted);
+    text-decoration: none;
+    font-family: var(--font-header);
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.main-nav a:hover, .main-nav a.active {
+    color: var(--text-main);
+}
+
+/* HERO SECTION */
+.hero {
+    padding: 10rem 2rem 6rem;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    background: radial-gradient(circle at top, #1e293b 0%, var(--bg-deep) 70%);
+}
+
+.hero-content {
+    max-width: 750px;
+}
+
+.hero-subtitle {
+    font-family: var(--font-header);
+    color: var(--accent);
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.hero-title {
+    font-size: 3.5rem;
+    margin: 1rem 0 1.5rem;
+    line-height: 1.1;
+}
+
+.hero-description {
+    font-size: 1.15rem;
+    color: var(--text-body);
+    margin-bottom: 2.5rem;
+}
+
+/* WYSZUKIWARKA */
+.search-bar-container {
+    display: flex;
+    background: var(--bg-card);
+    padding: 0.5rem;
+    border-radius: 50px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+#owl-search {
+    flex: 1;
+    background: transparent;
+    border: none;
+    padding: 0 1.5rem;
+    color: var(--text-main);
+    font-family: var(--font-header);
+    font-size: 1rem;
+}
+
+#owl-search:focus {
+    outline: none;
+}
+
+.btn-search {
+    background: var(--accent);
+    color: #000;
+    border: none;
+    padding: 0.75rem 2rem;
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+.btn-search:hover {
+    background-color: #f0c76e;
+    transform: scale(1.02);
+}
+
+/* KATALOG / SIATKA REGIONÓW */
+.catalog-section {
+    max-width: 1200px;
+    margin: 4rem auto;
+    padding: 0 2rem;
+}
+
+.section-header {
+    margin-bottom: 3rem;
+}
+
+.section-header h2 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.region-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.region-card {
+    background: var(--bg-card);
+    border-radius: 12px;
+    padding: 2.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.03);
+    transition: transform 0.3s, border-color 0.3s;
+}
+
+.region-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(226, 182, 89, 0.3);
+}
+
+.region-img-placeholder {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+}
+
+.region-info h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.75rem;
+}
+
+.region-info p {
+    color: var(--text-body);
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
+}
+
+.btn-link {
+    color: var(--accent);
+    text-decoration: none;
+    font-family: var(--font-header);
+    font-weight: 500;
+}
+
+/* FOOTER */
+.main-footer {
+    text-align: center;
+    padding: 3rem 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    font-family: var(--font-header);
+}
