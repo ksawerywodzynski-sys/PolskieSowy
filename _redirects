@@ -1,0 +1,6 @@
+# Cloudflare Pages — _redirects
+# https://developers.cloudflare.com/pages/configuration/redirects/
+
+# Trailing slash normalisation (optional)
+/gatunki   /gatunki/   301
+/regiony   /regiony/   301
