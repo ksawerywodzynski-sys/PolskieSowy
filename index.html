@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Polskie Sowy – Światowa Biblioteka Strigiformes</title>
+    <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+    <link rel="alternate icon" href="assets/images/favicon.ico">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+    <script async src="https://ebird.org/ebird-core.js"></script>
+
+    <header class="main-header">
+        <div class="header-container">
+            <a href="index.html" class="logo-space">
+                <div class="logo-placeholder">🦉</div>
+                <span class="logo-text">Polskie Sowy</span>
+            </a>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html" class="active">Start</a></li>
+                    <li><a href="#Katalog">Katalog Gatunków</a></li>
+                    <li><a href="#O-Projekcie">O Projekcie</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <span class="hero-subtitle">Pierwsza polska biblioteka strigiformes</span>
+            <h1 class="hero-title">Odkryj Władców Nocy</h1>
+            <p class="hero-description">
+                Kompendium wiedzy o sowach całego świata. Przeglądaj setki gatunków, słuchaj ich głosów dzięki integracji z Xeno-canto i podziwiaj zdjęcia z Macaulay Library.
+            </p>
+            <div class="search-bar-container">
+                <input type="text" id="owl-search" placeholder="Szukaj sowy (np. Puchacz, Puszczyk mszarny)...">
+                <button type="button" class="btn-search">Szukaj</button>
+            </div>
+        </div>
+    </section>
+
+    <main id="Katalog" class="catalog-section">
+        <div class="section-header">
+            <h2>Przeglądaj według regionów</h2>
+            <p class="section-intro">Wybierz kontynent, aby zawęzić poszukiwania wśród setek globalnych gatunków.</p>
+        </div>
+
+        <div class="region-grid">
+            <div class="region-card">
+                <div class="region-img-placeholder">🌍</div>
+                <div class="region-info">
+                    <h3>Europa</h3>
+                    <p>Od puszczyka zwyczajnego po majestatyczną sowę śnieżną.</p>
+                    <a href="sowy/europa/" class="btn-link">Zobacz gatunki &rarr;</a>
+                </div>
+            </div>
+
+            <div class="region-card">
+                <div class="region-img-placeholder">🌎</div>
+                <div class="region-info">
+                    <h3>Ameryka Północna</h3>
+                    <p>Poznaj syczki i wielkie sowy wirginijskie.</p>
+                    <a href="sowy/ameryka-polnocna/" class="btn-link">Zobacz gatunki &rarr;</a>
+                </div>
+            </div>
+
+            <div class="region-card">
+                <div class="region-img-placeholder">🌏</div>
+                <div class="region-info">
+                    <h3>Azja i Australia</h3>
+                    <p>Egzotyczne sowy rybożerne i unikalne gatunki wyspowe.</p>
+                    <a href="sowy/azja-australia/" class="btn-link">Zobacz gatunki &rarr;</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="main-footer">
+        <p>&copy; 2026 Polskie Sowy. Dane multimedialne dostarczane przez Macaulay Library oraz Xeno-canto.</p>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
